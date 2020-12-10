@@ -230,10 +230,10 @@ public class GraphicsDisplay extends JPanel {
             if(isPosledovatelno(point)) {
                 Point2D.Double center = xyToPoint(point[0], point[1]);
                 GeneralPath path = new GeneralPath();
-                path.moveTo(center.x - 6, center.y + 6);
-                path.lineTo(center.x + 6, center.y + 6);
-                path.lineTo(center.x + 0, center.y - 6);
-                path.lineTo(center.x - 6, center.y + 6);
+                path.moveTo(center.x - 5, center.y + 5);
+                path.lineTo(center.x + 5, center.y + 5);
+                path.lineTo(center.x + 0, center.y - 5);
+                path.lineTo(center.x - 5, center.y + 5);
                 canvas.draw(path);
             }
         }
