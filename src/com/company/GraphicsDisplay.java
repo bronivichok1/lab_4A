@@ -230,10 +230,10 @@ public class GraphicsDisplay extends JPanel {
             if(isPosledovatelno(point)) {
                 Point2D.Double center = xyToPoint(point[0], point[1]);
                 GeneralPath path = new GeneralPath();
-                path.moveTo(center.x - 5, center.y + 5);
-                path.lineTo(center.x + 5, center.y + 5);
-                path.lineTo(center.x + 0, center.y - 5);
-                path.lineTo(center.x - 5, center.y + 5);
+                path.moveTo(center.x - 4, center.y + 4);
+                path.lineTo(center.x + 4, center.y + 4);
+                path.lineTo(center.x + 0, center.y - 4);
+                path.lineTo(center.x - 4, center.y + 4);
                 canvas.draw(path);
             }
         }
@@ -284,7 +284,6 @@ public class GraphicsDisplay extends JPanel {
             // а нижняя (minY) <= 0.0
             canvas.draw(new Line2D.Double(xyToPoint(minX, 0),
                     xyToPoint(maxX, 0)));
-            // Стрелка оси X
             GeneralPath arrow = new GeneralPath();
             // Установить начальную точку ломаной точно на правый конец оси X
             Point2D.Double lineEnd = xyToPoint(maxX, 0);
