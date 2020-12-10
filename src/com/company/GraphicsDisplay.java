@@ -228,7 +228,7 @@ public class GraphicsDisplay extends JPanel {
         // Шаг 2 - Организовать цикл по всем точкам графика
         for (Double[] point : graphicsData) {
             if(isPosledovatelno(point)) {
-                Point2D.Double center = xyToPoint(point[0], point[1]);
+                Point2D.Double center = xyToPoint(point[0],point[1]);
                 GeneralPath path = new GeneralPath();
                 path.moveTo(center.x - 7, center.y + 7);
                 path.lineTo(center.x + 7, center.y + 7);
